@@ -1,15 +1,16 @@
 {
-  "name": "snap",
-  "version": "0.1.0",
-  "description": "The 'Hello, world!' of MetaMask Snaps, now written in TypeScript.",
+  "name": "@zenrock/qredo-snap",
+  "version": "0.1.4",
+  "description": "Qredo Network MetaMask Snap",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "git+https://github.com/zenrock/qredo-snap.git"
   },
-  "license": "(MIT-0 OR Apache-2.0)",
+  "license": "BUSL-1.0",
   "main": "./dist/bundle.js",
   "files": [
     "dist/",
+    "images/icon.svg",
     "snap.manifest.json"
   ],
   "scripts": {
@@ -27,8 +28,15 @@
     "test": "jest"
   },
   "dependencies": {
+    "@ethereumjs/common": "^4.3.0",
+    "@ethereumjs/tx": "^5.3.0",
+    "@ethereumjs/util": "^9.0.3",
+    "@metamask/eth-sig-util": "^7.0.2",
+    "@metamask/keyring-api": "^6.4.0",
     "@metamask/snaps-sdk": "^4.0.0",
-    "buffer": "^6.0.3"
+    "@metamask/utils": "^8.5.0",
+    "buffer": "^6.0.3",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
@@ -37,7 +45,7 @@
     "@metamask/eslint-config-jest": "^12.1.0",
     "@metamask/eslint-config-nodejs": "^12.1.0",
     "@metamask/eslint-config-typescript": "^12.1.0",
-    "@metamask/snaps-cli": "^6.1.0",
+    "@metamask/snaps-cli": "^6.2.0",
     "@metamask/snaps-jest": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",

@@ -4,7 +4,6 @@ module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
   },
-
   overrides: [
     {
       files: ['snap.config.ts'],
