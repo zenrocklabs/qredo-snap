@@ -1,27 +1,43 @@
 {
-  "version": "0.1.0",
-  "description": "An example Snap written in TypeScript.",
-  "proposedName": "TypeScript Example",
+  "version": "0.1.4",
+  "description": "Qredo Network MetaMask Snap",
+  "proposedName": "Qredo Network",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "git+https://github.com/zenrock/qredo-snap.git"
   },
   "source": {
-    "shasum": "TwVBeJ/PL4uARBEFZmgJukYd3XWyTbilkOPhtdg+GvU=",
+    "shasum": "Wun0aP3aW7xGGXbsFP0uldK0pPbhLqOtVtthW6cL1zI=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
-        "packageName": "snap",
+        "iconPath": "images/icon.svg",
+        "packageName": "@zenrock/qredo-snap",
         "registry": "https://registry.npmjs.org/"
       }
     }
   },
   "initialPermissions": {
     "snap_dialog": {},
+    "snap_manageAccounts": {},
+    "snap_manageState": {},
+    "endowment:network-access": {},
+    "snap_notify": {},
+    "endowment:transaction-insight": {
+      "maxRequestTime": 180000
+    },
     "endowment:rpc": {
       "dapps": true,
       "snaps": false
-    }
+    },
+    "endowment:keyring": {
+      "allowedOrigins": [
+        "https://qredo.network",
+        "http://localhost:3000",
+        "metamask"
+      ]
+    },
+    "endowment:lifecycle-hooks": {}
   },
   "manifestVersion": "0.1"
 }

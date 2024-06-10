@@ -1,12 +1,27 @@
-# TypeScript Example Snap
+# Qredo Network Snap package
 
-This snap demonstrates how to develop a snap with TypeScript. It is a simple
-snap that displays a confirmation dialog when the `hello` JSON-RPC method is
-called.
+This snap provides MetaMask ability to Qredo Web3 Wallets.
 
-## Testing
+## Build and run locally
 
-The snap comes with some basic tests, to demonstrate how to write tests for
-snaps. To test the snap, run `yarn test` in this directory. This will use
-[`@metamask/snaps-jest`](https://github.com/MetaMask/snaps/tree/main/packages/snaps-jest)
-to run the tests in `src/index.test.ts`.
+```shell
+yarn build
+
+yarn serve
+```
+
+## Packaging and publishing
+
+```shell
+yarn pack
+
+npm publish --access public
+```
+
+## Linting and testing
+
+```shell
+yarn lint
+
+yarn test
+```
