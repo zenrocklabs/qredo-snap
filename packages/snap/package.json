@@ -4,7 +4,7 @@
   "description": "Qredo Network MetaMask Snap",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zenrock/qredo-snap.git"
+    "url": "git+https://github.com/zenrocklabs/qredo-snap.git"
   },
   "license": "BUSL-1.0",
   "main": "./dist/bundle.js",

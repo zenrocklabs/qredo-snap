@@ -2,10 +2,10 @@
   "name": "root",
   "version": "0.1.0",
   "private": true,
-  "description": "Qredo Snap",
+  "description": "Qredo Network MetaMask Snap",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MetaMask/template-snap-monorepo.git"
+    "url": "git+https://github.com/zenrocklabs/qredo-snap.git"
   },
   "license": "BUSL-1.0",
   "author": "Zenrock Labs LTD",
