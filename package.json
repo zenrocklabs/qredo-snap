@@ -21,6 +21,9 @@
     "start": "yarn workspaces foreach --parallel --interlaced --verbose run start",
     "test": "yarn workspace @zenrock/qredo-snap run test"
   },
+  "resolutions": {
+    "@metamask/snaps-sdk": "^4.4.2"
+  },
   "dependencies": {
     "@types/jest": "^29.5.12"
   },

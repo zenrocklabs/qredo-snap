@@ -17,6 +17,7 @@ import {
   EthMethod,
 } from '@metamask/keyring-api';
 import { KeyringEvent } from '@metamask/keyring-api/dist/events';
+import type { SnapsProvider } from '@metamask/snaps-sdk';
 import {
   type Json,
   type JsonRpcRequest,
@@ -38,6 +39,8 @@ import {
 export class QredoMPCKeyring implements Keyring {
   #state: KeyringState;
 
+  #snap: SnapsProvider;
+
   #qredoApiClient: QredoAPI;
 
   #emitEventFunc: (
@@ -49,12 +52,13 @@ export class QredoMPCKeyring implements Keyring {
     event: KeyringEvent,
     data: Record<string, Json>,
   ): Promise<void> {
-    await emitSnapKeyringEvent(snap, event, data);
+    await emitSnapKeyringEvent(this.#snap, event, data);
   }
 
   constructor(
     state: KeyringState,
     qredoApiClient: QredoAPI,
+    snapI?: SnapsProvider,
     emitEventFunc?: (
       event: KeyringEvent,
       data: Record<string, Json>,
@@ -66,6 +70,7 @@ export class QredoMPCKeyring implements Keyring {
       emitEventFunc ??
       (async (event: KeyringEvent, data: Record<string, Json>) =>
         this.#emitEvent(event, data));
+    this.#snap = snapI ?? snap;
   }
 
   async listAccounts(): Promise<KeyringAccount[]> {
@@ -104,13 +109,13 @@ export class QredoMPCKeyring implements Keyring {
         ],
         type: EthAccountType.Eoa,
       };
-
       await this.#emitEventFunc(KeyringEvent.AccountCreated, { account });
       this.#state.wallets[account.id] = {
         account,
         refreshToken,
       };
       await this.#saveState();
+
       return account;
     } catch (error) {
       throw new Error((error as Error).message);
@@ -303,6 +308,6 @@ export class QredoMPCKeyring implements Keyring {
   }
 
   async #saveState(): Promise<void> {
-    await saveState(this.#state);
+    await saveState(this.#state, this.#snap);
   }
 }

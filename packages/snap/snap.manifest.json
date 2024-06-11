@@ -7,7 +7,7 @@
     "url": "git+https://github.com/zenrock/qredo-snap.git"
   },
   "source": {
-    "shasum": "Wun0aP3aW7xGGXbsFP0uldK0pPbhLqOtVtthW6cL1zI=",
+    "shasum": "dk8S/O6EePXFWrZ6dEvDMOxX/pvuqgTxG4IC+zky+is=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",

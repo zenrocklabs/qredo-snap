@@ -16,7 +16,7 @@ let keyring: QredoMPCKeyring;
  */
 async function getKeyring(): Promise<QredoMPCKeyring> {
   if (!keyring) {
-    const state = await getState();
+    const state = await getState(snap);
     if (!keyring) {
       keyring = new QredoMPCKeyring(state, new QredoAPIClient(qredoApiUrl));
     }

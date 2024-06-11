@@ -1,6 +1,5 @@
 import { Common, Hardfork } from '@ethereumjs/common';
-import type { TypedTransaction } from '@ethereumjs/tx';
-import { TransactionFactory } from '@ethereumjs/tx';
+import { type TypedTransaction, TransactionFactory } from '@ethereumjs/tx';
 import { hexToBytes } from '@metamask/utils';
 
 export type QredoAPI = {
