@@ -4,10 +4,10 @@
   "proposedName": "Qredo Network",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zenrock/qredo-snap.git"
+    "url": "git+https://github.com/zenrocklabs/qredo-snap.git"
   },
   "source": {
-    "shasum": "dk8S/O6EePXFWrZ6dEvDMOxX/pvuqgTxG4IC+zky+is=",
+    "shasum": "2/wfupDnklGyvtBWGHDHMykTjKIFosUwVvWYeGoyFBs=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
