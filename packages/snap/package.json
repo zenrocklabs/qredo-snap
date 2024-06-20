@@ -1,6 +1,6 @@
 {
   "name": "@zenrock/qredo-snap",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Qredo Network MetaMask Snap",
   "repository": {
     "type": "git",

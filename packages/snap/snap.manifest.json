@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Qredo Network MetaMask Snap",
   "proposedName": "Qredo Network",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "git+https://github.com/zenrocklabs/qredo-snap.git"
   },
   "source": {
-    "shasum": "2/wfupDnklGyvtBWGHDHMykTjKIFosUwVvWYeGoyFBs=",
+    "shasum": "y1KnV9K/OohiWq/YeDHyQ673Xz8hV6MyVVDXwTxAK2Y=",
     "location": {
       "npm": {
         "filePath": "dist/bundle.js",
